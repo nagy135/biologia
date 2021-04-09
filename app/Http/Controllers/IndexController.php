@@ -7,7 +7,7 @@ use App\Models\Level;
 
 class IndexController extends Controller
 {
-    public function index($id){
+    public function index(){
         return $this->base('index');
     }
 

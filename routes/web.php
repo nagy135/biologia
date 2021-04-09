@@ -14,5 +14,5 @@ use App\Http\Controllers\IndexController;
 |
 */
 
-Route::get('/', [IndexController::class, 'index']);
-Route::get('/level/{id}', [IndexController::class, 'level']);
+Route::get('/', [IndexController::class, 'index'])->name('index');
+Route::get('/level/{id}', [IndexController::class, 'level'])->name('level');

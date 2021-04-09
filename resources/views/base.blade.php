@@ -51,12 +51,12 @@
 
                         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                             <div class="navbar-nav mr-auto">
-                                <a href="index.html" class="nav-item nav-link active">Domov</a>
+                                <a href="{{ route('index') }}" class="nav-item nav-link active">Domov</a>
                                 <div class="nav-item dropdown">
                                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Rocniky</a>
                                     <div class="dropdown-menu">
                                         @foreach($levels as $level)
-                                            <a href="/level/{{$level->id}}" class="dropdown-item">{{ $level->name }}</a>
+                                            <a href="{{ route('level', ['id' => $level->id]) }}" class="dropdown-item">{{ $level->name }}</a>
                                         @endforeach
                                     </div>
                                 </div>
