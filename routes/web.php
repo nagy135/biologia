@@ -15,3 +15,4 @@ use App\Http\Controllers\IndexController;
 */
 
 Route::get('/', [IndexController::class, 'index']);
+Route::get('/level/{id}', [IndexController::class, 'level']);

@@ -61,10 +61,7 @@ class LevelCrudController extends CrudController
     {
         CRUD::setValidation(LevelRequest::class);
 
-        CRUD::field('id');
         CRUD::field('name');
-        CRUD::field('created_at');
-        CRUD::field('updated_at');
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:
