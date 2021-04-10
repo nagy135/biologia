@@ -39,10 +39,9 @@ class DocumentCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        CRUD::column('id');
         CRUD::column('name');
         CRUD::column('file');
-        CRUD::column('level_id');
+        CRUD::column('group_id');
         CRUD::column('created_at');
         CRUD::column('updated_at');
 
@@ -63,12 +62,14 @@ class DocumentCrudController extends CrudController
     {
         CRUD::setValidation(DocumentRequest::class);
 
-        CRUD::field('id');
         CRUD::field('name');
-        CRUD::field('file');
-        CRUD::field('level_id');
-        CRUD::field('created_at');
-        CRUD::field('updated_at');
+        $this->crud->addField([
+            'name' => 'file',
+            'label' => 'File',
+            'type' => 'upload',
+            'upload' => true,
+        ]);
+        CRUD::field('group_id');
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:

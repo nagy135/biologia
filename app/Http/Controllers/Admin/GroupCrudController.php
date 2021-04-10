@@ -62,11 +62,8 @@ class GroupCrudController extends CrudController
     {
         CRUD::setValidation(GroupRequest::class);
 
-        CRUD::field('id');
         CRUD::field('name');
         CRUD::field('level_id');
-        CRUD::field('created_at');
-        CRUD::field('updated_at');
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:
