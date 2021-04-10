@@ -12,6 +12,18 @@ class Document extends Model
 
     protected $guarded = ['id'];
 
+
+    public function setFileAttribute($value)
+    {
+        $attribute_name = "file";
+        $disk = "public";
+        $destination_path = "documents";
+
+        $this->uploadFileToDisk($value, $attribute_name, $disk, $destination_path);
+
+        // return $this->attributes[{$attribute_name}]; // uncomment if this is a translatable field
+    }
+
     // RELATIONS
 
     public function group(){
