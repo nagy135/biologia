@@ -12,7 +12,10 @@ class IndexController extends Controller
     }
 
     public function level($id){
-        return $this->base('level');
+        $level = Level::find($id);
+        return $this->base('level', [
+            'level' => $level
+        ]);
     }
 
     private function base(string $template, $context=[]){
