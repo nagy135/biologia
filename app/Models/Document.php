@@ -9,4 +9,12 @@ class Document extends Model
 {
     use \Backpack\CRUD\app\Models\Traits\CrudTrait;
     use HasFactory;
+
+    protected $guarded = ['id'];
+
+    // RELATIONS
+
+    public function group(){
+        return $this->belongsTo(Group::class);
+    }
 }

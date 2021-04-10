@@ -18,8 +18,8 @@ class CreateDocumentsTable extends Migration
             $table->string('name');
             $table->string('file');
 
-            $table->unsignedBigInteger('level_id')->nullable();
-            $table->foreign('level_id')->references('id')->on('levels');
+            $table->unsignedBigInteger('group_id')->nullable();
+            $table->foreign('group_id')->references('id')->on('groups');
 
             $table->timestamps();
         });

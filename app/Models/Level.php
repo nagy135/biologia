@@ -11,4 +11,9 @@ class Level extends Model
     use HasFactory;
 
     protected $guarded = ['id'];
+
+    // RELATIONS
+    public function groups(){
+        return $this->hasMany(Group::class);
+    }
 }

@@ -9,4 +9,15 @@ class Group extends Model
 {
     use \Backpack\CRUD\app\Models\Traits\CrudTrait;
     use HasFactory;
+
+    protected $guarded = ['id'];
+
+    // RELATIONS
+    public function level(){
+        return $this->belongsTo(Level::class);
+    }
+
+    public function documents(){
+        return $this->hasMany(Document::class);
+    }
 }
