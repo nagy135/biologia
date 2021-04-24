@@ -13,3 +13,5 @@ npm-debug.log
 yarn-error.log
 
 storage/app/public/documents/*
+
+.env.postgres
