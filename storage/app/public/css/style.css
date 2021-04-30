@@ -1780,5 +1780,9 @@ a:focus {
 .list-group-item:hover {
     background: #cccccc;
 }
+.empty-item:hover {
+    background: none;
+    cursor: not-allowed;
+}
 .level-name {
 }

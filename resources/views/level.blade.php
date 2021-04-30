@@ -17,7 +17,7 @@
                             </li>
                         @endforeach
                     @else
-                        <li class="list-group-item">prazdne...</li>
+                        <li class="list-group-item empty-item">prazdne...</li>
                     @endif
                 </ul>
             @endforeach
